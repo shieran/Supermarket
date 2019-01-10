@@ -19,7 +19,7 @@ public class Cashbox{
         return isFree;
     }
 
-    synchronized public void setFree(boolean free) {
+    public void setFree(boolean free) {
         isFree = free;
     }
 

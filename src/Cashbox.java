@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Cashbox{
 
     private String number;
@@ -50,6 +51,11 @@ public class Cashbox{
                             System.out.println("покупатель " + Thread.currentThread().getName() + " купил " + Customers.valueOf(Thread.currentThread().getName()).getProduct() +
                                     " в кассе " + cashboxes.get(i).getNumber());
                             System.out.println("касса номер " + cashboxes.get(i).getNumber() + " свободна");
+                            try {
+                                Thread.sleep(50);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                         cashboxes.get(i).setFree(true);
                         return;
                     }
